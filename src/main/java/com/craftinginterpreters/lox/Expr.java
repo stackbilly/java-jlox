@@ -2,7 +2,7 @@ package com.craftinginterpreters.lox;
 
 import java.util.List;
 
-abstract class Expr {
+abstract class Expr { //base class for AST
   interface Visitor<R> {
     R visitAssignExpr(Assign expr);
     R visitBinaryExpr(Binary expr);
@@ -127,6 +127,5 @@ abstract class Expr {
 
     final Token name;
   }
-
   abstract <R> R accept(Visitor<R> visitor);
 }
