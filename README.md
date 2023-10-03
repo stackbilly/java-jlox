@@ -39,5 +39,5 @@ Clone the repository and navigate to the project directory:
 git clone https://github.com/Livingstone-Billy/java-jlox.git
 cd jlox
 ```
-##Issues
+## Issues
 - Currently working on to add implementation for lambda or anonymous functions in the Lox interprater based on Crafting Interpreters book by Bob Nystrom
