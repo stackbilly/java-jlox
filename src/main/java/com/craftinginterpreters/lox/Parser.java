@@ -6,6 +6,7 @@ import java.util.List;
 
 import static com.craftinginterpreters.lox.TokenType.*;
 
+//parses stmnts & exprs
 class Parser {
   private static class ParseError extends RuntimeException {}
 
