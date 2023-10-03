@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//convert exprs into seq of tokens
+
 import static com.craftinginterpreters.lox.TokenType.*; // [static-import]
 
 class Scanner {
