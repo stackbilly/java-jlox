@@ -15,7 +15,6 @@ class Environment {
   }
 
   Object get(Token name) {
-    //System.err.println("get: " + name.lexeme + " " + this.values);
     if (values.containsKey(name.lexeme)) {
       return values.get(name.lexeme);
     }
@@ -52,8 +51,6 @@ class Environment {
     return environment;
   }
   Object getAt(int distance, String name) {
-  //  System.err.println("getAt: " + distance + " " + name);
-  //  for (Environment x = this; x != null; x = x.enclosing) {System.err.println("  " + x.values);}
     return ancestor(distance).values.get(name);
   }
   void assignAt(int distance, Token name, Object value) {
