@@ -2,6 +2,7 @@ package com.craftinginterpreters.lox;
 
 import java.util.List;
 
+//jlox stmnts abstract
 abstract class Stmt {
   interface Visitor<R> {
     R visitBlockStmt(Block stmt);
