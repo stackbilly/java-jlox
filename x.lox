@@ -11,7 +11,7 @@ var a = 0;
 }
 {
   {
-    var c = 2;
+    var c = 5;
     var x = "static";
     {
       fun foo () {
