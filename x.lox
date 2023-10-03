@@ -1,0 +1,31 @@
+var a = 0;
+{
+ var i = 0;
+ while(i<10){
+    print(i);
+    if(i == 4){
+        break;
+    }
+    i = i + 1;
+ }
+}
+{
+  {
+    var c = 2;
+    var x = "static";
+    {
+      fun foo () {
+        var d = 3;
+        print (x);
+        print (a);
+      }
+      fun bar () {
+        var e = 4;
+        var x = "dynamic";
+        foo ();
+      }
+      bar ();
+    }
+  }
+}
+
