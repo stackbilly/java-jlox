@@ -2,6 +2,7 @@ package com.craftinginterpreters.lox;
 
 import java.util.List;
 
+//implements LoxCallable interface for regular func
 class LoxFunction implements LoxCallable {
   private final Stmt.Function declaration;
   private final Environment closure;
