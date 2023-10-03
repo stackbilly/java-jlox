@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//interprets AST
 class Interpreter implements Expr.Visitor<Object>,
                              Stmt.Visitor<Void> {
   final Environment globals = new Environment();
