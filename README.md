@@ -35,5 +35,5 @@ To build and run the jlox Java interpreter, you need to have the following insta
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/Livingstone-Billy/java-jlox.git
 cd jlox
