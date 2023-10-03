@@ -9,6 +9,7 @@ jlox is a Java implementation of a Lox programming language interpreter based on
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Building the Interpreter](#building-the-interpreter)
+  - [Issues](#issues)
 
 ## Overview
 
@@ -37,3 +38,6 @@ Clone the repository and navigate to the project directory:
 ```bash
 git clone https://github.com/Livingstone-Billy/java-jlox.git
 cd jlox
+```
+##Issues
+- Currently working on to add implementation for lambda or anonymous functions in the Lox interprater based on Crafting Interpreters book by Bob Nystrom
