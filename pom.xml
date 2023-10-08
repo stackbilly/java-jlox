@@ -3,12 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <!-- 
-       This is a maven build file
-       It is useful for Java IDEs, such as VSCode
-       In order to run programs in VSCode, you also need a launch configuration
-       Launch configurations are stored in .vscode/launch.json
-  -->
+
   <groupId>com.craftinginterpreters</groupId>
   <artifactId>com.craftinginterpreters.lox.Lox</artifactId>
   <version>1.0</version>
