@@ -31,11 +31,6 @@ class Parser {
   private Stmt declaration() {
     try {
       if (match(FUN)) return function("function");
-//      if (match(VAR)){
-//        if (match(FUN)){
-//          return lambda();
-//        }
-//      }
       if (match(VAR)) return varDeclaration();
       return statement();
     } catch (ParseError error) {
