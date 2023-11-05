@@ -31,6 +31,7 @@ class Parser {
   private Stmt declaration() {
     try {
       if (match(FUN)) return function("function");
+      if (match(LAMBDA)) return lambda();
       if (match(VAR)) return varDeclaration();
       return statement();
     } catch (ParseError error) {
@@ -173,8 +174,8 @@ class Parser {
 
   //New code inserted here
   private Stmt lambda(){
-    consume(FUN, "Expect 'fun' before anonymous function.");
-    consume(LEFT_PAREN, "Expect '(' after 'fun'.");
+    consume(LAMBDA, "Expect 'lambda' before anonymous function.");
+    consume(LEFT_PAREN, "Expect '(' after 'lambda'.");
 
     List<Token> parameters = new ArrayList<>();
     if (!check(RIGHT_PAREN)){
@@ -388,6 +389,7 @@ class Parser {
       switch (peek().type) {
         case CLASS:
         case FUN:
+        case LAMBDA:
         case VAR:
         case FOR:
         case IF:
