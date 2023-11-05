@@ -48,17 +48,38 @@ class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<String> {
     builder.append(")");
     return builder.toString();
   }
+//  public String visitLambdaStmt(Stmt.Lambda stmt) {
+//    StringBuilder builder = new StringBuilder();
+//    builder.append("lambda(");
+//
+//    for (Token param : stmt.parameters) {
+//      builder.append(param.lexeme).append(", ");
+//    }
+//
+//    // Remove the last comma and space, if parameters exist
+//    if (!stmt.parameters.isEmpty()) {
+//      builder.setLength(builder.length() - 2);
+//    }
+//
+//    builder.append(") {\n");
+//
+//    for (Stmt bodyStmt : stmt.body) {
+//      builder.append(indent(bodyStmt.accept(this))).append("\n");
+//    }
+//
+//    builder.append("}");
+//
+//    return builder.toString();
+//  }
   public String visitLambdaStmt(Stmt.Lambda stmt) {
     StringBuilder builder = new StringBuilder();
-    builder.append("fun (");
+    builder.append("lambda(");
 
-    for (Token param : stmt.parameters) {
-      builder.append(param.lexeme).append(", ");
-    }
-
-    // Remove the last comma and space, if parameters exist
-    if (!stmt.parameters.isEmpty()) {
-      builder.setLength(builder.length() - 2);
+    for (int i = 0; i < stmt.parameters.size(); i++) {
+      builder.append(stmt.parameters.get(i).lexeme);
+      if (i < stmt.parameters.size() - 1) {
+        builder.append(", ");
+      }
     }
 
     builder.append(") {\n");
@@ -71,6 +92,7 @@ class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<String> {
 
     return builder.toString();
   }
+
 
   private String indent(String content) {
     // Indent each line by two spaces
